@@ -9,7 +9,7 @@ create Docker environment for use original [icoxfog417/baby-steps-of-rl-ja](http
 docker run --rm --gpus all -it ryoma310/python-rl:latest
 # or clone this repo and run ./run.sh
 git clone https://github.com/ryoma310/baby-steps-of-rl-ja-original.git
-bash ./run.sh
+bash ./baby-steps-of-rl-ja-original/run.sh
 
 
 ## inside the container, do setup first
