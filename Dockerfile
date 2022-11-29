@@ -57,16 +57,16 @@ RUN rm $ENV_FILE_NAME
 ENV CONDA_DEFAULT_ENV rl-book
 ENV PATH /opt/conda/envs/rl-book/bin:$PATH
 
-RUN echo '######### start setup #########' >> /home/$USERNAME/setup.sh
-RUN echo 'git clone https://github.com/icoxfog417/baby-steps-of-rl-ja.git' >> /home/$USERNAME/setup.sh
-RUN echo 'cd baby-steps-of-rl-ja' >> /home/$USERNAME/setup.sh
-RUN echo 'pip install -r requirements.txt' >> /home/$USERNAME/setup.sh
-RUN echo '######### done #########' >> /home/$USERNAME/setup.sh
+RUN echo '######### start setup #########' >> /home/$USERNAME/setup.sh && \
+    echo 'git clone https://github.com/icoxfog417/baby-steps-of-rl-ja.git' >> /home/$USERNAME/setup.sh && \
+    echo 'cd baby-steps-of-rl-ja' >> /home/$USERNAME/setup.sh && \
+    echo 'pip install -r requirements.txt' >> /home/$USERNAME/setup.sh && \
+    echo '######### done #########' >> /home/$USERNAME/setup.sh
 
 CMD ["/bin/bash"]
 
 USER root
-RUN conda clean --all -y
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN conda clean --all -y && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 USER $USERNAME
