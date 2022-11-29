@@ -6,7 +6,11 @@ create Docker environment for use original [icoxfog417/baby-steps-of-rl-ja](http
 - run with prebuild docker image
 ```bash
 ## enter the container
+docker run --rm --gpus all -it ryoma310/rl-book:latest
+# or clone this repo and run ./run.sh
+git clone https://github.com/ryoma310/baby-steps-of-rl-ja-original.git
 bash ./run.sh
+
 
 ## inside the container, do setup first
 bash ./setup.sh
