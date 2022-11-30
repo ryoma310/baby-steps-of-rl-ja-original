@@ -1,5 +1,5 @@
 # baby-steps-of-rl-ja-original
-create Docker environment for use original [icoxfog417/baby-steps-of-rl-ja](https://github.com/icoxfog417/baby-steps-of-rl-ja) code
+create Docker environment for execute original [icoxfog417/baby-steps-of-rl-ja](https://github.com/icoxfog417/baby-steps-of-rl-ja) code
 
 
 ## Basic Usage
